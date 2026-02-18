@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OptiHire - AI Resume Matching Engine</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+<!-- Loader -->
+<div id="loader">
+  <div class="loader-content">
+    <h1>OptiHire</h1>
+    <p>AI Resume–Job Matching Engine</p>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<div class="sidebar" id="sidebar">
+  <h2>OptiHire</h2>
+  <a href="#">Home</a>
+  <a href="#matcher">Matcher</a>
+  <a href="feedback.html">Feedback</a>
+</div>
+
+<div class="menu-btn" onclick="toggleSidebar()">
+  <i class="fas fa-bars"></i>
+</div>
+
+<!-- Theme Toggle -->
+<div class="theme-toggle" onclick="toggleTheme()">
+  <i id="theme-icon" class="fas fa-moon"></i>
+</div>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="slides">
+    <img src="hero1.jpg" class="slide active">
+    <img src="hero2.jpg" class="slide">
+    <img src="hero3.jpg" class="slide">
+  </div>
+
+  <div class="hero-text">
+    <h1>Connecting Talent with Opportunities</h1>
+    <p>AI Powered Resume–Job Matching System</p>
+    <button onclick="scrollToMatcher()" class="btn">Try Now</button>
+  </div>
+
+  <div class="dots">
+    <span class="dot active" onclick="currentSlide(0)"></span>
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+  </div>
+</section>
+
+<!-- Matcher Section -->
+<section id="matcher" class="matcher fade-in">
+  <h2>AI Resume–Job Matching Engine</h2>
+
+  <textarea id="resume" placeholder="Paste Resume Text Here"></textarea>
+  <textarea id="job" placeholder="Paste Job Description Here"></textarea>
+
+  <button onclick="analyzeMatch()" class="btn">Analyze Match</button>
+
+  <div id="result"></div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
